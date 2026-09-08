@@ -1,5 +1,7 @@
 # uripack — refaktoryzacja procesów URI
 
+Nowość w rozwoju: [samodzielne usługi URI z Dockerem](docs/information/standalone-uri-services.md) — jawne profile Python/Node w kontrakcie v2, przykłady i granice walidacji.
+
 **Paczka Python:** `uripack-refactor` · **CLI:** `uripack` · **wersja:** `0.1.0a1`.
 
 Działająca pierwsza faza refaktoryzacji: statyczna inwentaryzacja, deterministyczny

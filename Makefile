@@ -1,7 +1,13 @@
-.PHONY: test demo build validate
+.PHONY: test test-docker test-all demo build validate
 
 test:
 	python -m pytest -q
+
+test-docker:
+	python -m pytest -q integration_tests
+
+test-all:
+	python -m pytest -q tests integration_tests
 
 demo:
 	uripack demo

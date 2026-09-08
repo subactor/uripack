@@ -7,6 +7,7 @@ from .common import (checked_root, digest, fail, json_bytes, read_regular, relat
                      secret_check, sha256, walk_files)
 from .contracts import validate
 from .discovery import analyze
+from .services import service_files
 
 SEMANTICS = "copy-preserving-extraction; no cutover; behavioral verification separate"
 
@@ -134,6 +135,11 @@ def build_plan(request: dict, source_root: str | Path, target_root: str | Path) 
                     "dependencies":{"unit_refs":unit.get("depends_on", []),"native_locks":locks,"resolution":"not-executed"},
                     "provenance":{"files":unit_files,"selected_tree_sha256":digest(unit_files)},
                     "verification":{"copy_equivalence":"sha256-and-mode","behavioral_equivalence":"requires-protected-checks"}}}
+        if "service" in unit:
+            generated, runtime = service_files(unit, unit_files)
+            pack["layers"]["runtime"] = runtime
+            for name, content in generated.items():
+                write(f"packs/{unit['id']}/{name}", content)
         pack_path = f"packs/{unit['id']}/uripack.json"
         write(pack_path, json_bytes(pack))
         write(f"packs/{unit['id']}/uri-baseline.json", json_bytes({"schema":"uripack.uri-baseline/v1", "public_uris":unit.get("public_uris", []),
@@ -157,7 +163,7 @@ def build_plan(request: dict, source_root: str | Path, target_root: str | Path) 
     destinations = [op["target"].casefold() for op in operations]
     if len(destinations) != len(set(destinations)):
         fail("UPK-COLLISION-001", "Case-insensitive destination collision")
-    core = {"schema":"uripack.refactor-plan/v1","source_root":str(source),"target_root":str(target),"request":request,
+    core = {"schema":"uripack.refactor-plan/" + request["schema"].rsplit("/", 1)[1],"source_root":str(source),"target_root":str(target),"request":request,
             "request_sha256":digest(request),"source_sha256":snapshot_hash,"operations":operations,
             "checks":sorted(request.get("checks", [])),"warnings":sorted(warnings),"exclusions":sorted(exclusions),"semantics":SEMANTICS}
     plan = {**core,"plan_sha256":digest(core)}

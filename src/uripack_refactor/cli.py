@@ -88,8 +88,9 @@ def main(argv: list[str] | None = None) -> int:
             result = discover(args.root,args.include)
         elif args.command == "validate-request":
             from .contracts import validate
-            validate("request",load_document(args.request))
-            result = {"valid":True,"schema":"uripack.refactor-request/v1","execution_authority":False}
+            request = load_document(args.request)
+            validate("request",request)
+            result = {"valid":True,"schema":request["schema"],"execution_authority":False}
         elif args.command == "plan":
             from .planner import build_plan
             result = build_plan(load_document(args.request),args.source,args.target)

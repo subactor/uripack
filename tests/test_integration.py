@@ -75,6 +75,7 @@ def test_cross_language_canonical_golden(sdk,value):
 @pytest.mark.parametrize('mutator',[
     lambda r:r,
     lambda r:{**r,'operation':'apply'},
+    lambda r:{**r,'schema':['uripack.refactor-request/v1']},
     lambda r:{**r,'authority':True},
     lambda r:{**r,'units':[]},
     lambda r:{**r,'checks':['tests.x','tests.x']},
@@ -103,3 +104,22 @@ def test_cli_verify_cannot_modify_the_verified_artifact(sample,plan,guard,tmp_pa
     p=tmp_path/'plan.json';p.write_text(json.dumps(plan))
     assert main(['verify','--plan',str(p),'--out',str(sample[1]/'bad-report.json')])==2
     assert not (sample[1]/'bad-report.json').exists()
+
+
+@pytest.mark.parametrize('change', [
+    {}, {'base_image':'python:latest'}, {'language':'ruby'}, {'language':['python']}, {'ports':[0]},
+    {'ports':[8080,8080]}, {'command':['python','-c','print("ą😀")']},
+    {'command':['a','a']}, {'command':['a\nRUN bad']}, {'workdir':'a$b'},
+    {'authority':True}, {'dependency_file':None}, {'schema':'unknown'},
+    {'command':['python\n']}, {'workdir':'python\n'},
+    {'base_image':'python@sha256:' + 'a'*64 + '\n'},
+])
+def test_service_python_typescript_contract_conformance(sdk, change):
+    from uripack_refactor.common import load_document
+    request = load_document(ROOT / 'examples/standalone-services.yaml')
+    request['units'][0]['service'].update(change)
+    try: validate('request', request); py_valid=True
+    except UripackError: py_valid=False
+    script=f'import {{assertRefactorRequest}} from {json.dumps(sdk[1])}; try {{assertRefactorRequest(JSON.parse(process.argv[1]));process.stdout.write("true");}} catch {{process.stdout.write("false");}}'
+    run=subprocess.run([sdk[0],'--input-type=module','-e',script,'--',json.dumps(request)],capture_output=True,text=True,check=True,timeout=10)
+    assert (run.stdout=='true')==py_valid
