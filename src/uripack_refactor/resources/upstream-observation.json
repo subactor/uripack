@@ -1,0 +1,39 @@
+{
+  "schema": "uripack.upstream-observation/v1",
+  "observed_on": "2026-09-08",
+  "sources": [
+    {
+      "repository": "https://github.com/wellmanifest/dsl",
+      "version_observed": "0.1.0-dev",
+      "revision": null,
+      "pin_verified": false,
+      "read": [
+        "README.md",
+        "VERSION",
+        "spec/ directory listing",
+        "schemas/ directory listing",
+        "src/ directory listing"
+      ],
+      "unavailable": [
+        "spec/DSL_STANDARD.md",
+        "schemas/dsl-manifest.schema.json",
+        "src/dsl_check.py"
+      ],
+      "conformance": "not-established"
+    },
+    {
+      "repository": "https://github.com/wellmanifest/new-project",
+      "version_observed": "0.20.11",
+      "revision": null,
+      "pin_verified": false,
+      "read": [
+        "README.md",
+        "VERSION",
+        "CONTRIBUTING.md",
+        "governance/manifest.schema.json"
+      ],
+      "conformance": "not-established; protected managed validator required"
+    }
+  ],
+  "note": "Mutable source observations are not an adoption lock or execution authorization."
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "uripack.event-catalog/v1",
+  "events": [
+    {
+      "id": "extraction.admitted",
+      "emitter": "uripack_refactor.executor",
+      "payload_schema": "uripack.local-event/v1",
+      "replay_effects": [],
+      "documentation": "extraction.admitted.md"
+    },
+    {
+      "id": "extraction.checked",
+      "emitter": "uripack_refactor.executor",
+      "payload_schema": "uripack.local-event/v1",
+      "replay_effects": [],
+      "documentation": "extraction.checked.md"
+    },
+    {
+      "id": "extraction.completed",
+      "emitter": "uripack_refactor.executor",
+      "payload_schema": "uripack.local-event/v1",
+      "replay_effects": [],
+      "documentation": "extraction.completed.md"
+    },
+    {
+      "id": "extraction.staged",
+      "emitter": "uripack_refactor.executor",
+      "payload_schema": "uripack.local-event/v1",
+      "replay_effects": [],
+      "documentation": "extraction.staged.md"
+    }
+  ]
+}

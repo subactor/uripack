@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:uripack:schema:guard-response:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "uripack.guard-response/v1"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "allowed": {
+      "type": "boolean"
+    },
+    "subject_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "decision_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lease_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fencing_token": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "expires_at": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "result": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "request_id",
+    "allowed",
+    "subject_sha256",
+    "decision_ref",
+    "lease_ref",
+    "fencing_token",
+    "expires_at"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "uripack.error-catalog/v1",
+  "errors": [
+    {
+      "code": "UPK-CHECK-001",
+      "message": "Wymagana kontrola nie potwierdziła wyniku.",
+      "safe_exit": "Zbadaj rzeczywisty dowód i napraw materialny problem; nie przepisuj oczekiwań w celu ukrycia różnicy.",
+      "runbook": "UPK-CHECK-001.md"
+    },
+    {
+      "code": "UPK-COLLISION-001",
+      "message": "Niejednoznaczna własność URI, pliku lub jednostki.",
+      "safe_exit": "Rozdziel zakresy albo wydziel wspólną jednostkę; nie wybieraj właściciela arbitralnie.",
+      "runbook": "UPK-COLLISION-001.md"
+    },
+    {
+      "code": "UPK-CONTRACT-001",
+      "message": "Niezgodność zamkniętego kontraktu.",
+      "safe_exit": "Sprawdź wskazany schemat; nie dodawaj pól authority ani shell.",
+      "runbook": "UPK-CONTRACT-001.md"
+    },
+    {
+      "code": "UPK-DATA-001",
+      "message": "Nieprawidłowe dane na granicy JSON/YAML.",
+      "safe_exit": "Popraw składnię, duplikaty, typy lub zakres liczb; nie liberalizuj parsera.",
+      "runbook": "UPK-DATA-001.md"
+    },
+    {
+      "code": "UPK-DEMO-001",
+      "message": "Nie można wykonać izolowanej demonstracji.",
+      "safe_exit": "Sprawdź lokalny Python, Node i tsc. Nie podstawiaj mocka jako dowodu rzeczywistego wykonania.",
+      "runbook": "UPK-DEMO-001.md"
+    },
+    {
+      "code": "UPK-DEPENDENCY-001",
+      "message": "Nieprawidłowy graf lub pusty zakres zależności.",
+      "safe_exit": "Uzupełnij jawny domknięty zakres i usuń cykl deklaracji, bez zgadywania wykonawcy.",
+      "runbook": "UPK-DEPENDENCY-001.md"
+    },
+    {
+      "code": "UPK-DRIFT-001",
+      "message": "Wybrany stan źródła zmienił się po planowaniu.",
+      "safe_exit": "Wykonaj nową inwentaryzację i plan. Nie cofaj obcej pracy.",
+      "runbook": "UPK-DRIFT-001.md"
+    },
+    {
+      "code": "UPK-GUARD-001",
+      "message": "Odmowa lub błąd chronionej granicy.",
+      "safe_exit": "Sprawdź rzeczywistą autoryzację i stan lease. Timeout nie pozwala ślepo ponawiać skutku.",
+      "runbook": "UPK-GUARD-001.md"
+    },
+    {
+      "code": "UPK-INTEGRITY-001",
+      "message": "Niezgodność integralności.",
+      "safe_exit": "Zachowaj dowody, sprawdź źródło i artefakt, przygotuj nowy plan w razie zatwierdzonej zmiany.",
+      "runbook": "UPK-INTEGRITY-001.md"
+    },
+    {
+      "code": "UPK-IO-001",
+      "message": "Błąd wejścia/wyjścia.",
+      "safe_exit": "Ustal rzeczywisty stan celu przed ponowieniem; nie nadpisuj istniejących dowodów.",
+      "runbook": "UPK-IO-001.md"
+    },
+    {
+      "code": "UPK-LEASE-001",
+      "message": "Konflikt właściciela lub istniejący cel.",
+      "safe_exit": "Zachowaj obcy stan; ustal właściciela przez kontroler. Nie kasuj locka jako automatycznej naprawy.",
+      "runbook": "UPK-LEASE-001.md"
+    },
+    {
+      "code": "UPK-LIMIT-001",
+      "message": "Przekroczono ograniczenie zasobów.",
+      "safe_exit": "Zmniejsz zakres albo uzyskaj zatwierdzony budżet; nie wyłączaj limitów.",
+      "runbook": "UPK-LIMIT-001.md"
+    },
+    {
+      "code": "UPK-MAP-001",
+      "message": "Brak obsługiwanej sekcji modułów code2llm.",
+      "safe_exit": "Użyj mapy z sekcją M[n]; nie przedstawiaj jej jako pełnego checkout.",
+      "runbook": "UPK-MAP-001.md"
+    },
+    {
+      "code": "UPK-PATH-001",
+      "message": "Niedozwolona lub niedostępna ścieżka.",
+      "safe_exit": "Wskaż jawny regularny zakres bez symlinków, VCS i wyjścia poza korzeń.",
+      "runbook": "UPK-PATH-001.md"
+    },
+    {
+      "code": "UPK-PLATFORM-001",
+      "message": "Brak wymaganej bezpiecznej operacji platformy.",
+      "safe_exit": "Użyj wspieranego Linux/FS; nie zastępuj no-replace rename nadpisującą operacją.",
+      "runbook": "UPK-PLATFORM-001.md"
+    },
+    {
+      "code": "UPK-RECONCILE-001",
+      "message": "Wynik materializacji wymaga rekoncyliacji.",
+      "safe_exit": "Najpierw sprawdź katalog i chronione receipts. Nie wykonuj ponownie skutków o nieustalonym stanie.",
+      "runbook": "UPK-RECONCILE-001.md"
+    },
+    {
+      "code": "UPK-SECRET-001",
+      "message": "Zakres może zawierać sekret.",
+      "safe_exit": "Nie publikuj artefaktu. Ogranicz zakres lub użyj referencji do sekretu i dodatkowej kontroli DLP.",
+      "runbook": "UPK-SECRET-001.md"
+    },
+    {
+      "code": "UPK-URI-001",
+      "message": "Deklarowanego URI nie znaleziono w źródle.",
+      "safe_exit": "Przeprowadź inventory i wybierz istniejący identyfikator, bez zmiany semantyki URI.",
+      "runbook": "UPK-URI-001.md"
+    }
+  ]
+}

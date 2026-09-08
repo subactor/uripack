@@ -1,0 +1,8 @@
+# uripack-owned conservative request-only generation grammar.
+# Provider-side grammar enforcement is NOT implemented by this package.
+# The parser/schema/path validators remain mandatory after model output.
+root ::= ws "{" ws "\"schema\"" ws ":" ws "\"uripack.refactor-request/v1\"" ws "," ws "\"operation\"" ws ":" ws "\"plan\"" ws "," ws "\"namespace\"" ws ":" ws identifier ws "," ws "\"units\"" ws ":" ws "[" ws unit (ws "," ws unit)* ws "]" ws "}" ws
+unit ::= "{" ws "\"id\"" ws ":" ws identifier ws "," ws "\"include\"" ws ":" ws "[" ws string (ws "," ws string)* ws "]" ws "," ws "\"public_uris\"" ws ":" ws "[" ws (string (ws "," ws string)*)? ws "]" ws "}"
+identifier ::= "\"" [a-z] [a-z0-9.-]{0,95} "\""
+string ::= "\"" ([^"\\\x00-\x1f] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4}))* "\""
+ws ::= [ \t\n\r]*

@@ -1,0 +1,10 @@
+include README.md LICENSE VERSION CHANGELOG.md AGENTS.md CONTRIBUTING.md TODO.md Makefile
+recursive-include docs *.md
+recursive-include examples *.json *.yaml *.md
+recursive-include sdk/typescript *.ts *.json
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include operations *.json
+recursive-include events *.json *.md
+recursive-include error *.json *.md
+recursive-include src/uripack_refactor/resources *.json *.md *.gbnf

@@ -1,0 +1,17 @@
+# Osobny przykład kompletnej paczki TypeScript widocznej w mapie.
+# Nie łączyć automatycznie z pilotem: wymaga osobnej oceny zakresu i zależności.
+schema: uripack.refactor-request/v1
+operation: plan
+namespace: subactor
+units:
+  - id: eql
+    include:
+      - eql
+checks:
+  - wellmanifest.dsl-check
+  - wellmanifest.governance-check
+  - subactor.validator-agent
+  - subactor.testkit
+limits:
+  max_files: 3000
+  max_bytes: 67108864

@@ -1,0 +1,13 @@
+{
+  "schema": "uripack.guard-config/v1",
+  "argv": ["/opt/organism/bin/uripack-bridge"],
+  "pinned_files": {
+    "/opt/organism/bin/uripack-bridge": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "required_checks": [
+    "wellmanifest.dsl-check",
+    "wellmanifest.governance-check",
+    "subactor.validator-agent"
+  ],
+  "timeout_seconds": 60
+}

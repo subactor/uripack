@@ -1,0 +1,22 @@
+# Zakres startowy oparty na ścieżkach z mapy, do weryfikacji w realnym checkout.
+# Nie wpisujemy zgadywanych URI; wstaw dokładne wartości po inventory.
+schema: uripack.refactor-request/v1
+operation: plan
+namespace: subactor
+units:
+  - id: problem-reaction-observer
+    include:
+      - platform/config/process-packs/problem-reaction-observer
+  - id: ticket-lifecycle-connector
+    include:
+      - connectors/urirun-connector-subactor-ticket-lifecycle
+checks:
+  - wellmanifest.dsl-check
+  - wellmanifest.governance-check
+  - subactor.core.process-packs
+  - subactor.core.uri-collisions
+  - subactor.urirun-contract
+  - subactor.validator-agent
+limits:
+  max_files: 1000
+  max_bytes: 33554432

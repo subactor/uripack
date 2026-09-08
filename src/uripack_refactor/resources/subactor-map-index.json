@@ -1,0 +1,608 @@
+{
+  "schema": "uripack.map-index/v1",
+  "input_sha256": "3a7ee84e9482582b152d4bc004653820a606585c2c7a226397de30b5ac15608f",
+  "module_count": 23070,
+  "root_count": 102,
+  "roots": [
+    {
+      "name": "agents",
+      "module_count": 168
+    },
+    {
+      "name": "api",
+      "module_count": 14
+    },
+    {
+      "name": "automatyzacjaprocesow-pl",
+      "module_count": 2
+    },
+    {
+      "name": "autonom",
+      "module_count": 340
+    },
+    {
+      "name": "autonomicznosc-pl",
+      "module_count": 13
+    },
+    {
+      "name": "autonomy-lab",
+      "module_count": 18
+    },
+    {
+      "name": "brand",
+      "module_count": 22
+    },
+    {
+      "name": "browser-agent",
+      "module_count": 20
+    },
+    {
+      "name": "c2004-mask-services",
+      "module_count": 16
+    },
+    {
+      "name": "calendar",
+      "module_count": 36
+    },
+    {
+      "name": "chat-subactor-com",
+      "module_count": 2
+    },
+    {
+      "name": "coding-agent",
+      "module_count": 252
+    },
+    {
+      "name": "config",
+      "module_count": 55
+    },
+    {
+      "name": "connectors",
+      "module_count": 57
+    },
+    {
+      "name": "contractor-portal",
+      "module_count": 99
+    },
+    {
+      "name": "contracts",
+      "module_count": 43
+    },
+    {
+      "name": "contracts-subactor-com",
+      "module_count": 21
+    },
+    {
+      "name": "core",
+      "module_count": 3202
+    },
+    {
+      "name": "credential-vault",
+      "module_count": 22
+    },
+    {
+      "name": "deployment",
+      "module_count": 39
+    },
+    {
+      "name": "diagit",
+      "module_count": 68
+    },
+    {
+      "name": "docs",
+      "module_count": 130
+    },
+    {
+      "name": "docs-stage-subactor-com",
+      "module_count": 80
+    },
+    {
+      "name": "docs-subactor-com",
+      "module_count": 80
+    },
+    {
+      "name": "doctor-agent",
+      "module_count": 76
+    },
+    {
+      "name": "dorywcze-pl",
+      "module_count": 2
+    },
+    {
+      "name": "download-mask-services",
+      "module_count": 13
+    },
+    {
+      "name": "eql",
+      "module_count": 178
+    },
+    {
+      "name": "examples",
+      "module_count": 47
+    },
+    {
+      "name": "forms",
+      "module_count": 25
+    },
+    {
+      "name": "founder-subactor-com",
+      "module_count": 17
+    },
+    {
+      "name": "github-com",
+      "module_count": 150
+    },
+    {
+      "name": "guard-agent",
+      "module_count": 30
+    },
+    {
+      "name": "hostguard",
+      "module_count": 21
+    },
+    {
+      "name": "identity",
+      "module_count": 16
+    },
+    {
+      "name": "intent-contract-dsl-runtime",
+      "module_count": 1166
+    },
+    {
+      "name": "llm-account-hub",
+      "module_count": 126
+    },
+    {
+      "name": "llm-account-inventory",
+      "module_count": 80
+    },
+    {
+      "name": "llm-code-benchmark",
+      "module_count": 148
+    },
+    {
+      "name": "logo",
+      "module_count": 6
+    },
+    {
+      "name": "logo-subactor-com",
+      "module_count": 8
+    },
+    {
+      "name": "marketing",
+      "module_count": 19
+    },
+    {
+      "name": "mobile",
+      "module_count": 17
+    },
+    {
+      "name": "observability",
+      "module_count": 40
+    },
+    {
+      "name": "obslugabiurowa-pl",
+      "module_count": 2
+    },
+    {
+      "name": "offer",
+      "module_count": 24
+    },
+    {
+      "name": "onedev-agent",
+      "module_count": 689
+    },
+    {
+      "name": "orchestrator",
+      "module_count": 89
+    },
+    {
+      "name": "persony-pl",
+      "module_count": 2
+    },
+    {
+      "name": "phpts",
+      "module_count": 10
+    },
+    {
+      "name": "planfile-orchestration",
+      "module_count": 7
+    },
+    {
+      "name": "platform",
+      "module_count": 9438
+    },
+    {
+      "name": "platform-028",
+      "module_count": 4
+    },
+    {
+      "name": "platform-runtime-main",
+      "module_count": 1052
+    },
+    {
+      "name": "policy",
+      "module_count": 52
+    },
+    {
+      "name": "projekty",
+      "module_count": 75
+    },
+    {
+      "name": "queue-agent",
+      "module_count": 82
+    },
+    {
+      "name": "registry",
+      "module_count": 197
+    },
+    {
+      "name": "repair-agent",
+      "module_count": 59
+    },
+    {
+      "name": "report",
+      "module_count": 26
+    },
+    {
+      "name": "repository-publisher-agent",
+      "module_count": 18
+    },
+    {
+      "name": "resource-broker",
+      "module_count": 41
+    },
+    {
+      "name": "runtime",
+      "module_count": 64
+    },
+    {
+      "name": "rutyny-pl",
+      "module_count": 2
+    },
+    {
+      "name": "shell",
+      "module_count": 26
+    },
+    {
+      "name": "site-generator",
+      "module_count": 15
+    },
+    {
+      "name": "skills-agent",
+      "module_count": 328
+    },
+    {
+      "name": "status-mask-services",
+      "module_count": 6
+    },
+    {
+      "name": "status-subactor-com",
+      "module_count": 6
+    },
+    {
+      "name": "strategy",
+      "module_count": 228
+    },
+    {
+      "name": "subactor-improvement",
+      "module_count": 15
+    },
+    {
+      "name": "subactor-shell",
+      "module_count": 30
+    },
+    {
+      "name": "subauth",
+      "module_count": 26
+    },
+    {
+      "name": "subllm",
+      "module_count": 110
+    },
+    {
+      "name": "supervisor",
+      "module_count": 233
+    },
+    {
+      "name": "teacher-agent",
+      "module_count": 12
+    },
+    {
+      "name": "test-agent",
+      "module_count": 74
+    },
+    {
+      "name": "testkit",
+      "module_count": 85
+    },
+    {
+      "name": "ticket-radar",
+      "module_count": 23
+    },
+    {
+      "name": "ticket311-tmp.4Cm00s",
+      "module_count": 2
+    },
+    {
+      "name": "trigger-agent",
+      "module_count": 15
+    },
+    {
+      "name": "twin",
+      "module_count": 215
+    },
+    {
+      "name": "twin-developer",
+      "module_count": 63
+    },
+    {
+      "name": "twin-developer-refactor-execution-pack",
+      "module_count": 43
+    },
+    {
+      "name": "twin-probes",
+      "module_count": 101
+    },
+    {
+      "name": "twin-subactor",
+      "module_count": 81
+    },
+    {
+      "name": "urirun-cdp",
+      "module_count": 8
+    },
+    {
+      "name": "urirun-connectors-toolkit",
+      "module_count": 7
+    },
+    {
+      "name": "urirun-contract",
+      "module_count": 61
+    },
+    {
+      "name": "urirun-flow",
+      "module_count": 31
+    },
+    {
+      "name": "urirun-llm-runtime",
+      "module_count": 40
+    },
+    {
+      "name": "urirun-mind",
+      "module_count": 14
+    },
+    {
+      "name": "urirun-service-android-node",
+      "module_count": 10
+    },
+    {
+      "name": "urirun-service-chat",
+      "module_count": 9
+    },
+    {
+      "name": "urirun-service-scanner",
+      "module_count": 9
+    },
+    {
+      "name": "urirun-work",
+      "module_count": 11
+    },
+    {
+      "name": "validator-agent",
+      "module_count": 340
+    },
+    {
+      "name": "views",
+      "module_count": 24
+    },
+    {
+      "name": "www",
+      "module_count": 8
+    },
+    {
+      "name": "www-sub-actor",
+      "module_count": 1771
+    },
+    {
+      "name": "www-subactor-com",
+      "module_count": 9
+    },
+    {
+      "name": "www-subactor-com-retired",
+      "module_count": 14
+    }
+  ],
+  "metadata_paths": [
+    "agents/package.json",
+    "agents/services/inbound-email-agent/package.json",
+    "agents/services/llm-gateway/package.json",
+    "agents/services/node-worker/package.json",
+    "autonom/pyproject.toml",
+    "autonomicznosc-pl/package.json",
+    "autonomy-lab/package.json",
+    "brand/dsl-manifest.json",
+    "coding-agent/pyproject.toml",
+    "config/package.json",
+    "connectors/package.json",
+    "connectors/services/bridge/src/plesk-topology/connector.manifest.json",
+    "connectors/urirun-connector-subactor-account-twin/pyproject.toml",
+    "connectors/urirun-connector-subactor-account-twin/urirun_connector_subactor_account_twin/connector.manifest.json",
+    "connectors/urirun-connector-subactor-credential-harvest/pyproject.toml",
+    "connectors/urirun-connector-subactor-credential-harvest/urirun_connector_subactor_credential_harvest/connector.manifest.json",
+    "connectors/urirun-connector-subactor-llm-account-hub/pyproject.toml",
+    "connectors/urirun-connector-subactor-llm-account-hub/urirun_connector_subactor_llm_account_hub/connector.manifest.json",
+    "connectors/urirun-connector-subactor-managed-tunnel/pyproject.toml",
+    "connectors/urirun-connector-subactor-managed-tunnel/urirun_connector_subactor_managed_tunnel/connector.manifest.json",
+    "connectors/urirun-connector-subactor-secret-intake/pyproject.toml",
+    "connectors/urirun-connector-subactor-secret-intake/urirun_connector_subactor_secret_intake/connector.manifest.json",
+    "connectors/urirun-connector-subactor-ticket-lifecycle/pyproject.toml",
+    "connectors/urirun-connector-subactor-ticket-lifecycle/urirun_connector_subactor_ticket_lifecycle/connector.manifest.json",
+    "connectors/urirun-connector-subactor-twin-map/pyproject.toml",
+    "connectors/urirun-connector-subactor-twin-map/urirun_connector_subactor_twin_map/connector.manifest.json",
+    "contractor-portal/package.json",
+    "contractor-portal/vendor/contracts/packages/human-contract-generator/package.json",
+    "contracts-subactor-com/package.json",
+    "contracts/package.json",
+    "contracts/schemas/ticket-lifecycle/dsl-manifest.json",
+    "core/package.json",
+    "core/worktrees/ticket-234--cursor-reset-visibility/package.json",
+    "core/worktrees/ticket-235--drop-recheck-candidates-wrapper/package.json",
+    "credential-vault/package.json",
+    "credential-vault/pyproject.toml",
+    "diagit/dsl-manifest.json",
+    "diagit/pyproject.toml",
+    "doctor-agent/pyproject.toml",
+    "eql/package.json",
+    "examples/package.json",
+    "forms/package.json",
+    "founder-subactor-com/plesk-origin/package.json",
+    "guard-agent/pyproject.toml",
+    "hostguard/pyproject.toml",
+    "intent-contract-dsl-runtime/apps/backend/package.json",
+    "intent-contract-dsl-runtime/apps/web/package.json",
+    "intent-contract-dsl-runtime/package.json",
+    "intent-contract-dsl-runtime/packages/architecture-tooling/package.json",
+    "intent-contract-dsl-runtime/packages/chat-negotiation/package.json",
+    "intent-contract-dsl-runtime/packages/cli/package.json",
+    "intent-contract-dsl-runtime/packages/codegen/package.json",
+    "intent-contract-dsl-runtime/packages/document-ingestion/package.json",
+    "intent-contract-dsl-runtime/packages/document-renderer/package.json",
+    "intent-contract-dsl-runtime/packages/dsl-artifact-renderer/package.json",
+    "intent-contract-dsl-runtime/packages/dsl-model/package.json",
+    "intent-contract-dsl-runtime/packages/dsl-runtime/package.json",
+    "intent-contract-dsl-runtime/packages/example-runner/package.json",
+    "intent-contract-dsl-runtime/packages/intent-contract-model/dsl-manifest.json",
+    "intent-contract-dsl-runtime/packages/intent-contract-model/package.json",
+    "intent-contract-dsl-runtime/packages/llm-planner/package.json",
+    "intent-contract-dsl-runtime/packages/pdf-generator/package.json",
+    "intent-contract-dsl-runtime/packages/recruitment-workflow/package.json",
+    "intent-contract-dsl-runtime/packages/regression-runner/package.json",
+    "intent-contract-dsl-runtime/packages/testgen/package.json",
+    "intent-contract-dsl-runtime/packages/verifier-bridge/package.json",
+    "intent-contract-dsl-runtime/packages/verifier-mock/package.json",
+    "intent-contract-dsl-runtime/verifier/pyproject.toml",
+    "llm-account-hub/dsl-manifest.json",
+    "llm-account-hub/pyproject.toml",
+    "llm-account-inventory/pyproject.toml",
+    "llm-code-benchmark/pyproject.toml",
+    "mobile/pyproject.toml",
+    "observability/package.json",
+    "offer/dsl-manifest.json",
+    "onedev-agent/config/processes/dsl-manifest.json",
+    "onedev-agent/pyproject.toml",
+    "onedev-agent/worktrees/build-contexts/diagit-2b50fb8/dsl-manifest.json",
+    "onedev-agent/worktrees/build-contexts/diagit-2b50fb8/pyproject.toml",
+    "onedev-agent/worktrees/build-contexts/policy-dsl-70701a2/dsl-manifest.json",
+    "onedev-agent/worktrees/build-contexts/skills-agent-bc15c3a/pyproject.toml",
+    "orchestrator/package.json",
+    "phpts/pyproject.toml",
+    "planfile-orchestration/package.json",
+    "platform-runtime-main/package.json",
+    "platform/components/agents/package.json",
+    "platform/components/agents/services/autonomy-chat-agent/package.json",
+    "platform/components/agents/services/browser-agent/package.json",
+    "platform/components/agents/services/inbound-email-agent/package.json",
+    "platform/components/agents/services/llm-gateway/package.json",
+    "platform/components/agents/services/node-worker/package.json",
+    "platform/components/connectors/urirun-connector-subactor-account-twin/pyproject.toml",
+    "platform/components/connectors/urirun-connector-subactor-account-twin/urirun_connector_subactor_account_twin/connector.manifest.json",
+    "platform/components/connectors/urirun-connector-subactor-secret-intake/pyproject.toml",
+    "platform/components/connectors/urirun-connector-subactor-secret-intake/urirun_connector_subactor_secret_intake/connector.manifest.json",
+    "platform/components/contracts/package.json",
+    "platform/components/core/package.json",
+    "platform/components/credential-vault/package.json",
+    "platform/components/credential-vault/pyproject.toml",
+    "platform/components/observability/services/system-status/package.json",
+    "platform/components/runtime/packages/urirun-process-client/package.json",
+    "platform/components/strategy/package.json",
+    "platform/package.json",
+    "platform/packages/capability-preflight/package.json",
+    "platform/packages/founder-cli/package.json",
+    "platform/packages/intent-packs/package.json",
+    "platform/packages/planfile-orchestration/package.json",
+    "platform/urirun-connectors/urirun-connector-approved-recipient-email/pyproject.toml",
+    "platform/urirun-connectors/urirun-connector-approved-recipient-email/urirun_connector_approved_recipient_email/connector.manifest.json",
+    "platform/urirun-connectors/urirun-connector-platform-uri-blueprints/pyproject.toml",
+    "platform/urirun-connectors/urirun-connector-platform-uri-blueprints/urirun_connector_platform_uri_blueprints/connector.manifest.json",
+    "platform/worktrees/supervisor-actor-catalog/package.json",
+    "platform/worktrees/supervisor-actor-catalog/packages/capability-preflight/package.json",
+    "platform/worktrees/supervisor-actor-catalog/packages/founder-cli/package.json",
+    "platform/worktrees/supervisor-actor-catalog/packages/intent-packs/package.json",
+    "platform/worktrees/supervisor-actor-catalog/packages/planfile-orchestration/package.json",
+    "platform/worktrees/supervisor-actor-catalog/urirun-connectors/urirun-connector-approved-recipient-email/pyproject.toml",
+    "platform/worktrees/supervisor-actor-catalog/urirun-connectors/urirun-connector-approved-recipient-email/urirun_connector_approved_recipient_email/connector.manifest.json",
+    "platform/worktrees/supervisor-actor-catalog/urirun-connectors/urirun-connector-platform-uri-blueprints/pyproject.toml",
+    "platform/worktrees/supervisor-actor-catalog/urirun-connectors/urirun-connector-platform-uri-blueprints/urirun_connector_platform_uri_blueprints/connector.manifest.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/package.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/packages/capability-preflight/package.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/packages/founder-cli/package.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/packages/intent-packs/package.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/packages/planfile-orchestration/package.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/urirun-connectors/urirun-connector-approved-recipient-email/pyproject.toml",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/urirun-connectors/urirun-connector-approved-recipient-email/urirun_connector_approved_recipient_email/connector.manifest.json",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/urirun-connectors/urirun-connector-platform-uri-blueprints/pyproject.toml",
+    "platform/worktrees/ticket-339--allocate-ticket-worktree/urirun-connectors/urirun-connector-platform-uri-blueprints/urirun_connector_platform_uri_blueprints/connector.manifest.json",
+    "platform/worktrees/ticket-342--chat-observability/package.json",
+    "platform/worktrees/ticket-342--chat-observability/packages/capability-preflight/package.json",
+    "platform/worktrees/ticket-342--chat-observability/packages/founder-cli/package.json",
+    "platform/worktrees/ticket-342--chat-observability/packages/intent-packs/package.json",
+    "platform/worktrees/ticket-342--chat-observability/packages/planfile-orchestration/package.json",
+    "platform/worktrees/ticket-342--chat-observability/urirun-connectors/urirun-connector-approved-recipient-email/pyproject.toml",
+    "platform/worktrees/ticket-342--chat-observability/urirun-connectors/urirun-connector-approved-recipient-email/urirun_connector_approved_recipient_email/connector.manifest.json",
+    "platform/worktrees/ticket-342--chat-observability/urirun-connectors/urirun-connector-platform-uri-blueprints/pyproject.toml",
+    "platform/worktrees/ticket-342--chat-observability/urirun-connectors/urirun-connector-platform-uri-blueprints/urirun_connector_platform_uri_blueprints/connector.manifest.json",
+    "queue-agent/docs/dsl-manifest.json",
+    "queue-agent/pyproject.toml",
+    "registry/package.json",
+    "repair-agent/pyproject.toml",
+    "repository-publisher-agent/pyproject.toml",
+    "resource-broker/docs/dsl-manifest.json",
+    "runtime/package.json",
+    "shell/pyproject.toml",
+    "site-generator/package.json",
+    "skills-agent/pyproject.toml",
+    "strategy/package.json",
+    "strategy/worktrees/ticket-025--koru-cascade-format/package.json",
+    "subactor-improvement/package.json",
+    "subauth/package.json",
+    "subllm/pyproject.toml",
+    "supervisor/package.json",
+    "teacher-agent/pyproject.toml",
+    "testkit/package.json",
+    "ticket-radar/pyproject.toml",
+    "trigger-agent/pyproject.toml",
+    "twin-developer/package.json",
+    "twin-probes/package.json",
+    "twin-subactor/pyproject.toml",
+    "twin/pyproject.toml",
+    "twin/worktrees/ticket-010--reference-snapshot-recovery/pyproject.toml",
+    "twin/worktrees/ticket-011--adopt-new-project-01922/pyproject.toml",
+    "urirun-cdp/pyproject.toml",
+    "urirun-connectors-toolkit/pyproject.toml",
+    "urirun-contract/pyproject.toml",
+    "urirun-contract/sdk/js/package.json",
+    "urirun-flow/pyproject.toml",
+    "urirun-llm-runtime/pyproject.toml",
+    "urirun-mind/pyproject.toml",
+    "urirun-service-android-node/pyproject.toml",
+    "urirun-service-chat/pyproject.toml",
+    "urirun-service-scanner/pyproject.toml",
+    "urirun-work/pyproject.toml",
+    "validator-agent/pyproject.toml",
+    "validator-agent/worktrees/ticket-259--intent-compare-recovery/pyproject.toml",
+    "validator-agent/worktrees/ticket-260--graphql-merge-fallback/pyproject.toml",
+    "validator-agent/worktrees/ticket-290--close-publication-profile-shadow/pyproject.toml",
+    "www-sub-actor/dsl-manifest.json",
+    "www-sub-actor/package.json",
+    "www-sub-actor/src/frontend/package.json",
+    "www-sub-actor/src/php_app/dsl-manifest.json",
+    "www-sub-actor/worktrees/ticket-189--mobile-page-quality/dsl-manifest.json",
+    "www-sub-actor/worktrees/ticket-189--mobile-page-quality/package.json",
+    "www-sub-actor/worktrees/ticket-189--mobile-page-quality/src/frontend/package.json",
+    "www-sub-actor/worktrees/ticket-189--mobile-page-quality/src/php_app/dsl-manifest.json"
+  ],
+  "evidence_level": "index-only",
+  "tools_executed": 0,
+  "warning": "An indexed root is not necessarily a tool; paths do not prove callable APIs or installed runtimes."
+}
