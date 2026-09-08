@@ -1,0 +1,24 @@
+schema: uripack.refactor-request/v2
+operation: plan
+namespace: demo
+units:
+  - id: python-count
+    include: [python]
+    public_uris: ["demo://services/python/count"]
+    service:
+      schema: uripack.service-profile/v1
+      language: python
+      base_image: python@sha256:b04b5d7233d2ad9c379e22ea8927cd1378cd15c60d4ef876c065b25ea8fb3bf3
+      workdir: python
+      command: [python, main.py]
+      dependency_file: python/requirements.lock
+  - id: node-count
+    include: [node]
+    public_uris: ["demo://services/node/count"]
+    service:
+      schema: uripack.service-profile/v1
+      language: node
+      base_image: node@sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2
+      workdir: node
+      command: [node, main.mjs]
+      dependency_file: node/package-lock.json

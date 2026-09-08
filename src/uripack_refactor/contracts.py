@@ -12,6 +12,8 @@ def resource_json(name: str) -> Any:
 
 def validate(name: str, value: Any) -> None:
     canonical(value)
+    if name in {"request", "plan"} and isinstance(value, dict) and value.get("schema") == f"uripack.refactor-{name}/v2":
+        name += "-v2"
     errors = list(Draft202012Validator(resource_json(name + ".schema.json")).iter_errors(value))
     if errors:
         # Do not interpolate offending values; they can contain credentials.

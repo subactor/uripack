@@ -22,3 +22,29 @@ check=obj({'schema':{'const':'uripack.check-result/v1'},'status':{'enum':['passe
 for name, schema in [('request',request),('plan',plan),('guard-config',config),('guard-response',response),('check-result',check)]:
  schema={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':f'urn:uripack:schema:{name}:v1',**schema}
  (ROOT/f'{name}.schema.json').write_text(json.dumps(schema,indent=2)+'\n')
+
+# V1 stays byte-for-byte stable. V2 opts into standalone service packaging.
+from copy import deepcopy
+service_path = {'type':'string', 'minLength':1, 'maxLength':1024,
+                'pattern':r'^[A-Za-z0-9_./-]+$(?![\s\S])'}
+service = obj({
+ 'schema': {'const':'uripack.service-profile/v1'},
+ 'language': {'enum':['python','node']},
+ 'base_image': {'type':'string', 'maxLength':512,
+                'pattern':r'^[a-z0-9][a-z0-9./:_-]*@sha256:[a-f0-9]{64}$(?![\s\S])'},
+ 'workdir': service_path,
+ 'command': {'type':'array','minItems':1,'maxItems':64,
+             'items':{'type':'string','minLength':1,'maxLength':4096,'pattern':r'^[^\x00-\x1f\x7f]+$(?![\s\S])'}},
+ 'dependency_file': service_path,
+ 'ports': arr({'type':'integer','minimum':1,'maximum':65535},0,32),
+}, ['schema','language','base_image','workdir','command','dependency_file'])
+request_v2 = deepcopy(request)
+request_v2['properties']['schema'] = {'const':'uripack.refactor-request/v2'}
+request_v2['properties']['units']['items']['properties']['service'] = service
+plan_v2 = deepcopy(plan)
+plan_v2['properties']['schema'] = {'const':'uripack.refactor-plan/v2'}
+plan_v2['properties']['request'] = request_v2
+for name, version, schema in [('service',1,service),('request-v2',2,request_v2),('plan-v2',2,plan_v2)]:
+ schema={'$schema':'https://json-schema.org/draft/2020-12/schema',
+         '$id':f'urn:uripack:schema:{name.removesuffix("-v2")}:v{version}',**schema}
+ (ROOT/f'{name}.schema.json').write_text(json.dumps(schema,indent=2)+'\n')

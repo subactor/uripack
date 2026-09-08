@@ -1,0 +1,2 @@
+# This fixture uses only the Python standard library.
+# Real dependencies require exact versions and hashes for every wheel.
