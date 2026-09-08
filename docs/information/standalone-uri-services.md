@@ -3,7 +3,7 @@
   "schema": "wellmanifest.docs/document/v1",
   "id": "standalone-uri-services",
   "kind": "information",
-  "version": 1,
+  "version": 2,
   "title": "Standalone URI service packaging",
   "status": "implemented",
   "owner": "subactor/uripack",
@@ -16,7 +16,8 @@
     "https://github.com/subactor/uripack/issues/1",
     "repo://subactor/uripack/src/uripack_refactor/services.py",
     "repo://subactor/uripack/tests/test_services.py",
-    "repo://subactor/uripack/tests/test_integration.py"
+    "repo://subactor/uripack/tests/test_integration.py",
+    "repo://subactor/uripack/integration_tests/test_service_containers.py"
   ]
 }
 ---
@@ -46,7 +47,8 @@ protocols. No generic HTTP wrapper, URI router or deployment controller is added
 
 The source revision in metadata identifies the imported baseline. This change
 is implemented by `services.py`, its planner integration and the new v2 schemas;
-`tests/test_services.py` covers planning, Guard admission, tampering and Docker.
+`tests/test_services.py` covers planning, Guard admission and tampering.
+`integration_tests/test_service_containers.py` contains the two real Docker cases.
 The SDK conformance cases live in `tests/test_integration.py`.
 
 Observed locally on 2026-09-08: **192 passed, 0 failed, 0 skipped**, including
@@ -60,14 +62,17 @@ Implementation SHA-256 (`src/uripack_refactor/services.py`):
 Run the local suite, including actual container builds and requests:
 
 ```bash
-URIPACK_TEST_DOCKER=1 python -m pytest -q
+python -m pytest -q tests integration_tests
 ```
 
 Container tests build each fixture with network disabled, make the original
 source path unavailable, and invoke two independent clients without bind mounts.
 They check empty and Unicode inputs, the public URI, output count and UID 65532.
 The extraction Guard is explicitly a test fake; Docker itself is real.
-The ordinary suite leaves Docker effects opt-in.
+The ordinary suite (`make test`) runs 190 tests without Docker and without
+conditional skips. `make test-docker` explicitly runs both Docker cases;
+`make test-all` runs all 192. A missing Docker engine fails the integration
+suite. Both suites and their shared fixtures are included in the sdist.
 
 <!-- docs:section content -->
 ## Contract and usage
@@ -176,10 +181,15 @@ Digest syntax validation does not authenticate an image's publisher. Review the
 base image and dependencies; a Dockerfile and a successful fixture are not a
 sandbox guarantee or evidence of production compatibility.
 
-On 2026-09-08 the deployed local Validator release
-`62db4020dd28d333cc66d743568c980589388609`, registry `1.3.58`, had no
-`subactor/uripack` profile; local reconciliation contained no receipt for it.
-No independent protected publication or production Guard result is claimed.
+On 2026-09-08 the protected local CI profile was deployed from
+[subactor/onedev-agent#230](https://github.com/subactor/onedev-agent/pull/230).
+The publication profile is authored in SQLite and its projection and signer key
+were independently approved in
+[subactor/registry#47](https://github.com/subactor/registry/pull/47).
+The deployed verifier from
+[subactor/validator-agent#399](https://github.com/subactor/validator-agent/pull/399)
+checks the signature and exact pins. These prerequisites are separate from
+uripack's own independent publication and from production Guard integration.
 This repository has no artifact-registry entry in Platform; new contracts are
 validated by JSON Schema, their generator and the package tests. Documentation
 placement follows Wellmanifest/docs, but protected CI adoption is unverified.
@@ -187,8 +197,8 @@ placement follows Wellmanifest/docs, but protected CI adoption is unverified.
 <!-- docs:section next_actions -->
 ## Next actions
 
-Review the material PR for #1, configure an independently reviewed local CI and
-Validator profile, and then use the protected publication path. A real service
+Publish the material PR for #1 through the deployed local CI and signed SQLite
+profile, preserving the independent Validator decision. A real service
 pilot requires the operator's pinned image, native locked dependencies,
 protected Guard checks and independent acceptance of the native interface.
 Rollback before cutover is to keep using the unchanged original application;

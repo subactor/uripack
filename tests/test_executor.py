@@ -4,7 +4,7 @@ import pytest
 from uripack_refactor.common import UripackError, load_document
 from uripack_refactor.executor import apply_plan, verify_artifact, STATE_PATH, _publish_no_replace
 from uripack_refactor.journal import verify_chain
-from conftest import RecordingGuard
+from tests.conftest import RecordingGuard
 
 def _snapshot(root):
     return {str(p.relative_to(root)):p.read_bytes() for p in root.rglob('*') if p.is_file()}
